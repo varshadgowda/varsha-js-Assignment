@@ -3,32 +3,37 @@
 <head>
 </head>
 <body>
-<div>
-<h1>Email:</h1>
-<h1>Firstname:</h1>
-<h1>Lastname:</h1>
-<h1>Address:</h1>
+<div id="showMe">
+	<h1>Email:</h1><span id="demo">	</span>
+	<h1>Firstname:</h1><span id="demo1"></span>
+	<h1>Lastname:</h1><span id="demo2"></span>
+	<h1>Address</h1><span id="demo3"></span>
 </div>
-
+<div id="ShowME11">
 <input type="txt" name="Email" placeholder="Email" id="Email"/>
 <input type="txt" name="Firstname" placeholder="Firstname" id="Firstname"/>
 <input type="txt" name="Lastname" placeholder="Lastname" id="Lastname"/>
 <input type="txt" name="Address" placeholder="Address" id="Address"/>
 <button type="button" onclick="myFunction()">Submit</button>
-<p id="demo"></p>
+</div>
+
+</body>
 <script>
+document.getElementById("showMe").style.display="none";
 function myFunction()
 {
-	debugger
-var Email=document.getElementById("Email").value
-document.getElementById("demo").innerHTML="Firstname;
-var Firstname = document.getElementById("Firstname").value;
-document.getElementById("demo").innerHTML="Firstname;
-var Lastname = document.getElementById("Lastname").value;
-var Email=document.getElementById("Email").value
-var Address=document.getElementById("Address").value
-document.getElementById("demo").innerHTML="Firstname;
+	debugger;
+	var Email=document.getElementById("Email").value
+	document.getElementById("demo").innerHTML=Email;
+	var Firstname = document.getElementById("Firstname").value;
+	document.getElementById("demo1").innerHTML=Email;
+	var Lastname = document.getElementById("Lastname").value;
+	document.getElementById("demo2").innerHTML=Lastname;
+	var Address=document.getElementById("Address").value
+	document.getElementById("demo3").innerHTML=Address;
+	document.getElementById("showMe").style.display="block";
+	document.getElementById("ShowME11").style.display="none";
+
 }
 </script>
-</body>
 </html>
