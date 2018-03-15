@@ -20,20 +20,24 @@
 </body>
 <script>
 document.getElementById("showMe").style.display="none";
-function myFunction()
-{
-	debugger;
-	var Email=document.getElementById("Email").value
-	document.getElementById("demo").innerHTML=Email;
-	var Firstname = document.getElementById("Firstname").value;
-	document.getElementById("demo1").innerHTML=Email;
-	var Lastname = document.getElementById("Lastname").value;
-	document.getElementById("demo2").innerHTML=Lastname;
-	var Address=document.getElementById("Address").value
-	document.getElementById("demo3").innerHTML=Address;
-	document.getElementById("showMe").style.display="block";
-	document.getElementById("ShowME11").style.display="none";
-
-}
+function myFunction() {
+		var Email=document.getElementById("Email").value
+		var Firstname = document.getElementById("Firstname").value;
+		var Lastname = document.getElementById("Lastname").value;
+		var Address=document.getElementById("Address").value
+		if(Firstname === "" || Lastname === " "){
+    		alert("Please fill the form");
+		}
+		else 
+		{
+		document.getElementById("showMe").style.display="none";
+		document.getElementById("showMe").style.display="block";
+		document.getElementById("demo").innerHTML=Email;
+		document.getElementById("demo1").innerHTML=Firstname;
+		document.getElementById("demo2").innerHTML=Lastname;
+		document.getElementById("demo3").innerHTML=Address;
+		document.getElementById("ShowME11").style.display="none";
+    	}
+    }
 </script>
 </html>
